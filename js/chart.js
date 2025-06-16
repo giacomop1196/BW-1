@@ -16,4 +16,14 @@ new Chart(chart, {
       },
     ],
   },
+  options: {
+    borderWidth: 2,
+    borderRadius: 10,
+    hoverBorderWidth: 2,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
 })
