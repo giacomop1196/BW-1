@@ -22,12 +22,3 @@ for(let i = 1; i <=10; i++){
     span.appendChild(img);
 }
    
-/*const feedBack = function (){
-    img.addEventListener("click", () => {
-        if(img.dataset.attiva === 'ture'){
-            img.src ='../assets/images/star.svg';
-            img.dataset.attiva === 'false';
-        }
-    });img.dataset.attiva === 'true';
-}
-*/
