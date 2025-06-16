@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="background-img">
+    <header>
+      <div class="timer-container">
+        <img src="/assets/images/epicode_logo.png" alt="logo" />
+
+        <div class="timer text-center">
+          <p class="timer-p">seconds</p>
+          <p class="sessanta">60</p>
+          <p class="timer-p">Remainging</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="text-center white questions-title">Titolo Domanda</h1>
+      <!--h3 controllato dal js, qui appariranno le domande -->
+
+      <form class="text-center form-domande">
+        <input type="button" class="button-4-questions" value="Risposta 1" />
+        <input type="button" class="button-4-questions" value="Risposta 2" />
+        <input type="button" class="button-4-questions" value="Risposta 3" />
+        <input type="button" class="button-4-questions" value="Risposta 4" />
+      </form>
+
+      <footer class="text-center">
+        <p class="text-center white">
+          Domanda 1 <span class="purple">/10</span>
+        </p>
+        <!--tracciamento dell array, domande -->
+      </footer>
+    </main>
+  </body>
 </html>
