@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 html,
 body {
   margin: 0;
@@ -19,13 +21,6 @@ body {
 
 .purple {
   color: #c2128d;
-}
-
-header img {
-  height: 40px;
-  margin-top: 60px;
-  margin-left: 90px;
-  text-align: start;
 }
 
 .welcome-main {
@@ -63,6 +58,101 @@ header img {
 
 .welcome-subtitle {
   font-size: 40px;
+}
+
+/* "Results page" */
+
+.result-main {
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+}
+
+.result-title {
+  text-align: center;
+}
+
+.result-title h1 {
+  font-size: 3.5em;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.result-title p {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.doughnut-chart-exitPool-Correct {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.doughnut-chart-exitPool-Wrong {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.right-answers {
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+.wrong-answers {
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+.correct-result,
+.wrong-result {
+  font-size: 3em;
+  font-weight: 300;
+  margin: 0;
+}
+
+.right-percentage,
+.wrong-percentage {
+  font-size: 3em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.doughnut-chart {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  padding: 50px 60px;
+}
+
+.rateUs-link {
+  text-align: center;
+}
+
+.resultPage-rateButton {
+  display: inline-block;
+  padding: 20px 60px;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border: solid white 2px;
+  cursor: pointer;
+  font-size: 2em;
+  margin-left: auto;
+  font-size: large;
+  box-shadow: 0 0 7px #15a7a7;
+}
+
+.resultPage-rateButton:hover {
+  background-color: #15a7a7;
+}
+
+.rateUs-link {
+  margin-bottom: 50px;
+
 }
 
 .text-center {
@@ -135,4 +225,11 @@ footer {
 .timer-p {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+header img {
+  height: 40px;
+  margin-top: 60px;
+  margin-left: 90px;
+  text-align: start;
 }
