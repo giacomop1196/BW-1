@@ -143,3 +143,8 @@ for(let i = 1; i <=10; i++){
     stelle.push(img);
     span.appendChild(img);
 }
+const button = document.getElementsByClassName('button-style')[0];
+button.addEventListener('click', () => {
+  alert('Feedback Inviato');
+  location.reload();
+});
