@@ -20,7 +20,7 @@ new Chart(chart, {
     borderWidth: 0,
     borderRadius: 2,
     cutout: `70%`,
-    hoverBorderWidth: 2,
+    hoverBorderWidth: 1,
     backgroundColor: [` #d20094`, `#00ffff`],
     plugins: {
       legend: {
@@ -28,21 +28,4 @@ new Chart(chart, {
       },
     },
   },
-  plugins: [
-    {
-      id: "centerText",
-      afterDraw: function (chart) {
-        const ctx = chart.ctx
-        // ctx.save()
-        ctx.font = "24px Arial"
-        ctx.textAlign = "center"
-        ctx.textBaseline = "middle"
-        ctx.fillStyle = "white"
-        const centerX = chart.canvas.width / 1.5
-        const centerY = chart.canvas.height / 1.5
-        ctx.fillText(``, centerX, centerY)
-        // ctx.restore()
-      },
-    },
-  ],
 })

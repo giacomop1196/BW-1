@@ -99,12 +99,14 @@ body {
   flex-direction: column;
   align-items: baseline;
   justify-content: center;
+  width: 165px;
 }
 .doughnut-chart-exitPool-Wrong {
   display: flex;
   flex-direction: column;
   align-items: end;
   justify-content: center;
+  width: 165px;
 }
 
 .doughnut-chart {
