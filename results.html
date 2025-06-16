@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Results</title>
+  </head>
+  <body class="background-img">
+    <header>
+      <img src="./assets/images/epicode_logo.png" alt="Epicode Logo" />
+    </header>
+    <main class="result-main">
+      <section class="white result-title">
+        <h1>Results</h1>
+        <p>The summary of your answers:</p>
+      </section>
+      <section class="white doughnut-chart">
+        <div class="doughnut-chart-exitPool-Correct">
+          <h2 class="correct-result">Correct</h2>
+          <p class="right-percentage">500%</p>
+          <p class="right-answers">question</p>
+        </div>
+        <div class="chart-container">
+          <canvas id="mainChart"></canvas>
+        </div>
+        <div class="doughnut-chart-exitPool-Wrong">
+          <h2 class="wrong-result">Wrong</h2>
+          <p class="wrong-percentage">500%</p>
+          <p class="wrong-answers">question</p>
+        </div>
+      </section>
+      <section class="rateUs-link">
+        <button class="resultPage-rateButton" type="button">RATE US</button>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/chart.js"></script>
+  </body>
 </html>
