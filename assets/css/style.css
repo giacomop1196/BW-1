@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 html,
 body {
@@ -60,7 +61,11 @@ body {
   font-size: 40px;
 }
 
-/* "Results page" */
+/* "Results page START" */
+
+.result-body-heigth {
+  height: 100vh;
+}
 
 .result-main {
   font-family: "Outfit", sans-serif;
@@ -79,30 +84,42 @@ body {
 }
 
 .result-title p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 300;
   margin: 0;
+}
+
+.chart-container {
+  width: 500px;
+  height: 500px;
 }
 
 .doughnut-chart-exitPool-Correct {
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  justify-content: center;
 }
 .doughnut-chart-exitPool-Wrong {
   display: flex;
   flex-direction: column;
   align-items: end;
+  justify-content: center;
 }
 
-.right-answers {
-  font-size: 1.2em;
-  font-weight: 200;
+.doughnut-chart {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  padding: 50px 60px;
 }
 
+.right-answers,
 .wrong-answers {
   font-size: 1.2em;
   font-weight: 200;
+  margin: 0;
 }
 
 .correct-result,
@@ -110,21 +127,50 @@ body {
   font-size: 3em;
   font-weight: 300;
   margin: 0;
+  margin-bottom: -12px;
 }
 
 .right-percentage,
 .wrong-percentage {
   font-size: 3em;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: -5px;
+}
+
+.message-result {
+  width: 50%;
+  position: relative;
+  left: 25%;
+  bottom: 67%;
+}
+
+.message-result > h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3em;
   font-weight: 600;
+  font-style: normal;
   margin: 0;
 }
 
-.doughnut-chart {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: space-between;
-  padding: 50px 60px;
+.message-result > h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  font-style: normal;
+  color: #00ffff;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.message-result > p {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
 }
 
 .rateUs-link {
@@ -132,8 +178,9 @@ body {
 }
 
 .resultPage-rateButton {
+  font-family: "Inter", sans-serif;
   display: inline-block;
-  padding: 20px 60px;
+  padding: 20px 70px;
   background-color: transparent;
   color: white;
   font-weight: 600;
@@ -151,9 +198,11 @@ body {
 }
 
 .rateUs-link {
-  margin-bottom: 50px;
-
+  padding-top: 20px;
+  padding-bottom: 150px;
 }
+
+/* "Results page END" */
 
 .text-center {
   text-align: center;
