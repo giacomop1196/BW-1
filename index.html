@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-    
+
+<body class="background-img">
+    <header>
+        <img src="/assets/images/epicode_logo.png" alt="">
+    </header>
+    <main class="welcome-main">
+        <h1 class="white welcome-title">Welcome <br> <b class="bold">to your exam</b></h1>
+        <h3 class="purple welcome-subtitle">Instructions</h3>
+        <div>
+            <p class="white">We don't expect most engineers to know the answer to all of these
+                questions, so don't worry if you're unsure of a few of them.
+            </p>
+            <ul class="white">
+                <li>
+                    Each question is <b>timed</b> and can only be answered once.
+                </li>
+                <li>
+                    Changing browser tab or opening other windows will <b>invalidate the question.</b>
+                </li>
+                <li>
+                    This exam will take approx. <b>0-5 minutes.</b>
+                </li>
+            </ul>
+        </div>
+        <form action="">
+            <div class="flex-container">
+                <input class="welcome-checkbox" type="checkbox" required>
+                <p class="white">I promise to answer myself without help from anyone</p>
+                <button type="submit" class="button-style">PROCEED</button>
+            </div>
+        </form>
+
+    </main>
 </body>
+
 </html>
