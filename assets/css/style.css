@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 html,
 body {
@@ -60,7 +61,11 @@ body {
   font-size: 40px;
 }
 
-/* "Results page" */
+/* "Results page START" */
+
+.result-body-heigth {
+  height: 100vh;
+}
 
 .result-main {
   font-family: "Outfit", sans-serif;
@@ -79,30 +84,44 @@ body {
 }
 
 .result-title p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 300;
   margin: 0;
+}
+
+.chart-container {
+  width: 500px;
+  height: 500px;
 }
 
 .doughnut-chart-exitPool-Correct {
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  justify-content: center;
+  width: 165px;
 }
 .doughnut-chart-exitPool-Wrong {
   display: flex;
   flex-direction: column;
   align-items: end;
+  justify-content: center;
+  width: 165px;
 }
 
-.right-answers {
-  font-size: 1.2em;
-  font-weight: 200;
+.doughnut-chart {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  padding: 50px 60px;
 }
 
+.right-answers,
 .wrong-answers {
   font-size: 1.2em;
   font-weight: 200;
+  margin: 0;
 }
 
 .correct-result,
@@ -110,21 +129,50 @@ body {
   font-size: 3em;
   font-weight: 300;
   margin: 0;
+  margin-bottom: -12px;
 }
 
 .right-percentage,
 .wrong-percentage {
   font-size: 3em;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: -5px;
+}
+
+.message-result {
+  width: 50%;
+  position: relative;
+  left: 25%;
+  bottom: 67%;
+}
+
+.message-result > h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3em;
   font-weight: 600;
+  font-style: normal;
   margin: 0;
 }
 
-.doughnut-chart {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: space-between;
-  padding: 50px 60px;
+.message-result > h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  font-style: normal;
+  color: #00ffff;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.message-result > p {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
 }
 
 .rateUs-link {
@@ -132,8 +180,9 @@ body {
 }
 
 .resultPage-rateButton {
+  font-family: "Inter", sans-serif;
   display: inline-block;
-  padding: 20px 60px;
+  padding: 20px 70px;
   background-color: transparent;
   color: white;
   font-weight: 600;
@@ -151,9 +200,11 @@ body {
 }
 
 .rateUs-link {
-  margin-bottom: 50px;
-
+  padding-top: 20px;
+  padding-bottom: 150px;
 }
+
+/* "Results page END" */
 
 .text-center {
   text-align: center;
@@ -234,42 +285,31 @@ header img {
   text-align: left;
 }
 
-.feedback-main {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  text-align: center;
-  font-family: 'Outfit', sans-serif;
-  color: #e7e7eb;
+.feedBack-main {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
 }
-
 .feedback-main h2 {
-  font-size: 60px;
-  margin-bottom: 15px;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 15px;
 }
-
-.star p, .comment p {
-  font-size: 30px;
-  margin: 0;
+.star p, .commento p {
+    font-size: 30px;
+    color: white;
+    margin: 0;
 }
-
-#stars {
-  margin: 35px 0 60px 0;
-  cursor: pointer;
+.star img {
+    margin-top: 35px;
+    margin-bottom: 60px;
 }
-
-.feedback {
-  width: 95%;
-  height: 20px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  text-size-adjust: .5rem;
-  border-bottom: 2px solid #900080;   
-  margin: 40px 0;
-  padding: 0 0 10px 30px;
-  color: #e7e7eb;
+.scritta input {
+    width: 95%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #900080;   
+    margin: 40px 0;
+    padding: 0 0 10px 30px;
 }
-/* ========== FEEDBACK PAGE ========== */
