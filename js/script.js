@@ -115,36 +115,81 @@ window.onload = function () {
 
 // BUON LAVORO 💪🚀
 
-
-
 let correctAnswerCount = 0;
 let incorrectAnswerCount = 0;
 let currentQuestionIndex = 0;
 let timer;
-
+let questionTitle = document.querySelector(".questions-title");
 let timerDisplay = document.querySelector(".sessanta");
-
+let formQuestions = document.querySelector(".form-domande");
+let questionTracker = document.querySelector("footer p");
 let timeLeft = 60;
 
 function startTimer() {
-  clearInterval(timer);  // é la funzione che azzera il timer
-  timeLeft = 5;
-  timerDisplay.textContent = timeLeft; 
-  timer = setInterval(() => {  // é la funzione che fa partire il countdown 
-    timeLeft--; 
+  clearInterval(timer); // é la funzione che azzera il timer
+  timeLeft = 10;
+  timerDisplay.textContent = timeLeft;
+  timer = setInterval(() => {
+    // é la funzione che fa partire il countdown
+    timeLeft--;
     timerDisplay.textContent = timeLeft;
     if (timeLeft <= 0) {
-      clearInterval(timer);  // Se il tempo é <- 0 , resettiamo il timer 
-    incorrectAnswerCount ++
-    console.log(incorrectAnswerCount)
+      clearInterval(timer); // Se il tempo é <- 0 , resettiamo il timer
+      incorrectAnswerCount++;
+      currentQuestionIndex++;
+      displayQuestions();
+      console.log(incorrectAnswerCount);
     }
-  }, 1000); // per farlo contare in secondi 
-
-  
+  }, 1000); // per farlo contare in secondi
 }
 
-startTimer();
+console.log(incorrectAnswerCount);
 
-console.log(incorrectAnswerCount)
+function displayQuestions() {
+  // questa funzione Mostra le domande sullo schermo
+  if (currentQuestionIndex < questions.length) {
+    // questa funziona dichiara che se l'indice é minore della lunghezza dell'array, parte la funzione del timer
+    startTimer();
+    const questionData = questions[currentQuestionIndex]; // questa costante definisce la domanda tramite l'array
+    questionTitle.innerHTML = questionData.question; // qui la andiamo ad "appendere" nel h1 presente in html
+    formQuestions.innerHTML = ""; // qui vengono cancellati i pulsanti precedenti
+    const allAnswer = [
+      ...questionData.incorrect_answers,
+      questionData.correct_answer, // ... copia tutte le risposte dell array delle domande e le inserisce dentro Allanswer
+    ];
+    console.log(allAnswer);
+    allAnswer.forEach((answer) => {
+      const button = document.createElement("input");
+      button.type = "button";
+      button.classList.add("button-4-questions");
+      button.value = answer;
 
+      button.addEventListener("click", () => checkAnswer(answer));
 
+      formQuestions.appendChild(button);
+    });
+    questionTracker.innerHTML = `Domanda ${
+      currentQuestionIndex + 1
+    } <span class="purple">/${questions.length}</span> `;
+  } else {
+    window.location.href = "./results.html";
+  }
+
+  console.log(correctAnswerCount, +"   " + incorrectAnswerCount);
+}
+
+function checkAnswer(selectedAnswer) {
+  const questionData = questions[currentQuestionIndex];
+  if (selectedAnswer === questionData.correct_answer) {
+    correctAnswerCount++;
+  } else {
+    incorrectAnswerCount++;
+  }
+
+  currentQuestionIndex++;
+  displayQuestions();
+}
+
+window.onload = function () {
+  displayQuestions();
+};
