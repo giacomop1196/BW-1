@@ -1,9 +1,8 @@
 function startQuiz() {
-    const checkBox = document.getElementById('myCheckbox')
-if(checkBox.checked){
-window.location.href = "./question.html"
-}else{
-alert('bocciato')
-}
-
+  const checkBox = document.getElementById("myCheckbox")
+  if (checkBox.checked) {
+    window.location.href = "./question.html"
+  } else {
+    alert("Kindly confirm the below checkbox in order to proceed")
+  }
 }
