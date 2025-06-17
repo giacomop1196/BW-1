@@ -7,6 +7,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  font-family: "Inter", sans-serif;
 }
 
 .background-img {
@@ -242,7 +243,8 @@ body {
 }
 
 .questions-title {
-  font-size: 60px;
+  font-size: 40px;
+  font-family: "Outfit", sans-serif;
 }
 
 .button-4-questions:hover {
@@ -284,6 +286,7 @@ footer {
 .timer-p {
   margin-top: auto;
   margin-bottom: auto;
+  font-size: small;
 }
 
 /* ---------- FEEDBACK PAGE ---------- */
@@ -335,20 +338,20 @@ header img {
 
 /* ========== FEEDBACK PAGE ========== */
 .countdown-container {
-  position: relative; /* Essenziale per il posizionamento assoluto dei figli */
+  position: relative;
   width: 200px;
   height: 200px;
   margin-right: 90px;
   margin-top: 45px;
-  display: flex; /* Utilizza flexbox per centrare l'SVG all'interno di questo contenitore */
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 svg {
-  position: absolute;
-  top: 0;
-  left: 0;
+  transform: rotate(-90deg);
+  position: relative;
+  z-index: 1;
 }
 
 circle {
@@ -369,22 +372,8 @@ circle {
   transition: stroke-dashoffset 1s linear;
 }
 
-
 .timer-text {
-  font-size: 40px;
-  margin: 0; /* Rimuovi i margini predefiniti per un controllo preciso con flexbox */
-  color: white;
-  text-align: center; /* Assicurati che il testo all'interno del div sia centrato */
-}
-
-.countdown-text-wrapper {
-  position: absolute; /* Posiziona questo wrapper in modo assoluto rispetto a .countdown-container */
-  top: 50%; /* Sposta il bordo superiore al centro verticale */
-  left: 50%; /* Sposta il bordo sinistro al centro orizzontale */
-  transform: translate(-50%, -50%); /* Sposta indietro il 50% della sua larghezza/altezza per centrarlo perfettamente */
-  display: flex; /* Attiva Flexbox */
-  flex-direction: column; /* Imposta la direzione dei flex item in colonna (uno sopra l'altro) */
-  justify-content: center; /* Centra verticalmente gli elementi all'interno del wrapper */
-  align-items: center; /* Centra orizzontalmente gli elementi all'interno del wrapper */
-  pointer-events: none; /* Permette ai click di passare attraverso questo elemento */
+  position: absolute;
+  font-size: 1rem;
+  z-index: 2;
 }
