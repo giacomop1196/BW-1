@@ -101,6 +101,7 @@ body {
   justify-content: center;
   width: 165px;
 }
+
 .doughnut-chart-exitPool-Wrong {
   display: flex;
   flex-direction: column;
@@ -136,6 +137,7 @@ body {
 .right-percentage {
   padding-right: 20px;
 }
+
 .wrong-percentage {
   padding-left: 20px;
 }
@@ -330,4 +332,46 @@ header img {
   padding: 0 0 10px 30px;
   color: #e7e7eb;
 }
+
 /* ========== FEEDBACK PAGE ========== */
+.countdown-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-right: 90px;
+  margin-top: 45px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+svg {
+  transform: rotate(-90deg);
+  position: relative;
+}
+
+circle {
+  fill: none;
+  stroke-width: 20;
+  stroke-linecap: round;
+  margin-bottom: 20px;
+}
+
+.bg {
+  stroke: #2422223e;
+}
+
+.progress {
+  stroke: #00FFFF;
+  stroke-dasharray: 565.48;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
