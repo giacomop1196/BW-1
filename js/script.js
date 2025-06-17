@@ -182,7 +182,7 @@ function displayQuestions() {
 
       formQuestions.appendChild(button) // abbiamo appeso questi bottoni dentro il form
     })
-    questionTracker.innerHTML = `Domanda ${
+    questionTracker.innerHTML = `QUESTION ${
       currentQuestionIndex + 1 // serve per tenere traccia del numero della domanda
     } <span class="purple">/${questions.length}</span> ` //quante domande ci sono all'interno dell'aray
   } else {
