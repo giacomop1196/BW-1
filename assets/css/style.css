@@ -80,7 +80,7 @@ body {
   font-size: 3.5em;
   font-weight: 600;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .result-title p {
@@ -90,8 +90,8 @@ body {
 }
 
 .chart-container {
-  width: 500px;
-  height: 500px;
+  width: 480px;
+  height: 480px;
 }
 
 .doughnut-chart-exitPool-Correct {
@@ -115,7 +115,7 @@ body {
   flex-direction: row;
   text-align: center;
   justify-content: space-around;
-  padding: 50px 60px;
+  padding: 40px 60px;
 }
 
 .correct-result,
@@ -153,7 +153,7 @@ body {
   width: 50%;
   position: relative;
   left: 25%;
-  bottom: 67%;
+  bottom: 70%;
 }
 
 .congrat {
@@ -190,7 +190,7 @@ body {
 .resultPage-rateButton {
   font-family: "Inter", sans-serif;
   display: inline-block;
-  padding: 20px 70px;
+  padding: 20px 75px;
   background-color: transparent;
   color: white;
   font-weight: 600;
@@ -208,8 +208,7 @@ body {
 }
 
 .rateUs-link {
-  padding-top: 20px;
-  padding-bottom: 150px;
+  padding-bottom: 40px;
 }
 
 /* "Results page END" */
@@ -363,7 +362,7 @@ circle {
 }
 
 .progress {
-  stroke: #00FFFF;
+  stroke: #00ffff;
   stroke-dasharray: 565.48;
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
