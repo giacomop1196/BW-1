@@ -7,6 +7,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  font-family: "Inter", sans-serif;
 }
 
 .background-img {
@@ -242,7 +243,8 @@ body {
 }
 
 .questions-title {
-  font-size: 60px;
+  font-size: 40px;
+  font-family: "Outfit", sans-serif;
 }
 
 .button-4-questions:hover {
@@ -284,6 +286,7 @@ footer {
 .timer-p {
   margin-top: auto;
   margin-bottom: auto;
+  font-size: small;
 }
 
 /* ---------- FEEDBACK PAGE ---------- */
@@ -343,12 +346,12 @@ header img {
   justify-content: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
 }
 
 svg {
   transform: rotate(-90deg);
   position: relative;
+  z-index: 1;
 }
 
 circle {
@@ -370,8 +373,7 @@ circle {
 }
 
 .timer-text {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
+  position: absolute;
+  font-size: 1rem;
+  z-index: 2;
 }
