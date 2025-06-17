@@ -25,6 +25,10 @@ body {
   color: #c2128d;
 }
 
+.error-index {
+  color: red;
+}
+
 .welcome-main {
   margin-left: 90px;
   margin-right: 90px;
@@ -365,15 +369,14 @@ circle {
 }
 
 .progress {
-  stroke: #00ffff;
+  stroke: #00FFFF;
   stroke-dasharray: 565.48;
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
 }
 
 .timer-text {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
+  position: absolute;
+  font-size: 1rem;
+  z-index: 2;
 }
