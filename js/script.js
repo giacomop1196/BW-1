@@ -1,4 +1,5 @@
-const questions = [
+//array delle domande 
+const questions = [ 
   {
     category: "Science: Computers",
     type: "multiple",
@@ -159,31 +160,31 @@ function displayQuestions() {
     ];
     console.log(allAnswer);
     allAnswer.forEach((answer) => {
-      const button = document.createElement("input");
+      const button = document.createElement("input"); //qua abbiamo creato i bottoni presenti all'interno delle domande
       button.type = "button";
-      button.classList.add("button-4-questions");
-      button.value = answer;
+      button.classList.add("button-4-questions");// gli abbiamo dato una classe per il css
+      button.value = answer;// qui andiamo a riempire il bottone
 
-      button.addEventListener("click", () => checkAnswer(answer));
+      button.addEventListener("click", () => checkAnswer(answer)); // questo evento controlla che la risposta giusta o sbagliata
 
-      formQuestions.appendChild(button);
+      formQuestions.appendChild(button);// abbiamo appeso questi bottoni dentro il form
     });
     questionTracker.innerHTML = `Domanda ${
-      currentQuestionIndex + 1
-    } <span class="purple">/${questions.length}</span> `;
+      currentQuestionIndex + 1 // serve per tenere traccia del numero della domanda
+    } <span class="purple">/${questions.length}</span> `;//quante domande ci sono all'interno dell'aray
   } else {
-    window.location.href = "./results.html";
+    window.location.href = "./results.html";//collegamento alla pagina html, quando finisce il quiz o quando termina il tempo
   }
 
-  console.log(correctAnswerCount, +"   " + incorrectAnswerCount);
+  console.log(correctAnswerCount, +"   " + incorrectAnswerCount);// serve a noi per controllare in console le risposte
 }
 
 function checkAnswer(selectedAnswer) {
-  const questionData = questions[currentQuestionIndex];
-  if (selectedAnswer === questionData.correct_answer) {
-    correctAnswerCount++;
+  const questionData = questions[currentQuestionIndex];//creiamo una variabile uguale ad un array per le domande 
+  if (selectedAnswer === questionData.correct_answer) {// controlla se la risposta è corretta o sbagliata
+    correctAnswerCount++;//aggiunge un +1 alle domande corrette
   } else {
-    incorrectAnswerCount++;
+    incorrectAnswerCount++;//aggiunge un +1 alle domande sbagliate
   }
 
   currentQuestionIndex++;
