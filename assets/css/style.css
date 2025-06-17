@@ -252,7 +252,7 @@ footer {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  border: 15px solid rgba(0, 0, 0, 0.199);
+  border: 15px solid #00FFFF ;
   color: white;
   margin-right: 120px;
   margin-top: 30px;
@@ -324,3 +324,24 @@ header img {
   color: #e7e7eb;
 }
 /* ========== FEEDBACK PAGE ========== */
+
+
+/*.circle {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+border: 10px solid lightgray;
+border-top: 10px solid #00000023;
+animation: countdown-animation 10s linear forwards;
+z-index: 100;
+/*
+}
+
+/*@keyframes countdown-animation { 
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+} */

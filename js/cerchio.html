@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+
+    <style>
+      .countdown-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+      }
+      svg {
+        transform: rotate(-90deg);
+      }
+      circle {
+        fill: none;
+        stroke-width: 10;
+        stroke-linecap: round;
+      }
+      .bg {
+        stroke: #2422223e;
+      }
+      .progress {
+        stroke: #00FFFF;
+        stroke-dasharray: 565.48;
+        stroke-dashoffset: 0;
+        transition: stroke-dashoffset 1s linear;
+      }
+      .timer-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="countdown-container">
+      <svg width="200" height="200">
+        <circle class="bg" cx="100" cy="100" r="90" />
+        <circle class="progress" cx="100" cy="100" r="90" />
+      </svg>
+      <div class="timer-text" id="timer">10</div>
+    </div>
+
+    <script>
+      const duration = 10; // secondi
+      let timeLeft = duration;
+      const circle = document.querySelector(".progress");
+      const timer = document.getElementById("timer");
+      const radius = -90;
+      const circumference = 2 * Math.PI * radius;
+
+      circle.style.strokeDasharray = circumference;
+
+      function updateCountdown() {
+        timeLeft--;
+
+        const offset = circumference * (1 - timeLeft / duration);
+        circle.style.strokeDashoffset = offset;
+
+        timer.textContent = timeLeft;
+
+        if (timeLeft > 0) {
+          setTimeout(updateCountdown, 1000);
+        } else {
+          timer.textContent = "0";
+        }
+      }
+
+      // Start
+      setTimeout(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
