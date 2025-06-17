@@ -372,15 +372,8 @@ circle {
 }
 
 .timer-text {
-<<<<<<< HEAD
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2em;
 }
-=======
-  position: absolute;
-  font-size: 1rem;
-  z-index: 2;
-}
->>>>>>> main
