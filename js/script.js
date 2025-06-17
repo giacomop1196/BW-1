@@ -119,3 +119,27 @@
       // Se stai mostrando una domanda alla volta, aggiungi semplicemente un punto alla variabile del punteggio che hai precedentemente creato SE la risposta selezionata è === correct_answer
 
       // BUON LAVORO 💪🚀
+
+const stelle = [];
+const span = document.getElementById("stella");
+for(let i = 1; i <=10; i++){
+    const img = document.createElement('img');
+    img.src = '../assets/images/star.copy.svg';
+    img.dataset.index = i;
+    img.classList.add('stella');
+    img.style.margin = '10px';
+
+    img.addEventListener('click',() => {
+      const index = parseInt(img.dataset.index);
+        for(let j = 0; j < stelle.length; j++){
+         if(j <= index) {
+            stelle[j].src = '../assets/images/star.svg';
+         }
+         else{
+            stelle[j].src = '../assets/images/star.copy.svg';
+         }
+        }
+    });
+    stelle.push(img);
+    span.appendChild(img);
+}
