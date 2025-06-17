@@ -117,13 +117,6 @@ body {
   padding: 50px 60px;
 }
 
-.right-answers,
-.wrong-answers {
-  font-size: 1.2em;
-  font-weight: 200;
-  margin: 0;
-}
-
 .correct-result,
 .wrong-result {
   font-size: 3em;
@@ -140,6 +133,20 @@ body {
   margin-bottom: -5px;
 }
 
+.right-percentage {
+  padding-right: 20px;
+}
+.wrong-percentage {
+  padding-left: 20px;
+}
+
+.right-answers,
+.wrong-answers {
+  font-size: 1.2em;
+  font-weight: 200;
+  margin: 0;
+}
+
 .message-result {
   width: 50%;
   position: relative;
@@ -147,7 +154,7 @@ body {
   bottom: 67%;
 }
 
-.message-result > h3 {
+.congrat {
   font-family: "Inter", sans-serif;
   font-size: 1.3em;
   font-weight: 600;
@@ -155,17 +162,16 @@ body {
   margin: 0;
 }
 
-.message-result > h4 {
+.passedORfail {
   font-family: "Inter", sans-serif;
   font-size: 1.3em;
   font-weight: 600;
   font-style: normal;
-  color: #00ffff;
   margin: 0;
   margin-bottom: 30px;
 }
 
-.message-result > p {
+.final-message {
   font-family: "Inter", sans-serif;
   font-size: 1em;
   font-weight: 300;
@@ -291,7 +297,7 @@ header img {
   margin-right: auto;
   margin-top: 5%;
   text-align: center;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   color: #e7e7eb;
 }
 
@@ -300,7 +306,8 @@ header img {
   margin-bottom: 15px;
 }
 
-.star p, .comment p {
+.star p,
+.comment p {
   font-size: 30px;
   margin: 0;
 }
@@ -317,8 +324,8 @@ header img {
   border: none;
   outline: none;
   font-size: 1em;
-  text-size-adjust: .5rem;
-  border-bottom: 2px solid #900080;   
+  text-size-adjust: 0.5rem;
+  border-bottom: 2px solid #900080;
   margin: 40px 0;
   padding: 0 0 10px 30px;
   color: #e7e7eb;

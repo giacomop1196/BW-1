@@ -43,8 +43,8 @@ const startPageResultCorrect = () => {
   let rightResultDisplay = document.createElement(`div`)
   rightResultDisplay.classList.add(`correct-display-results`)
   rightResultDisplay.innerHTML = `
-    <p>${resultCorrect.toFixed(2)} %</p>
-    <p>${correctAnswer}/${questionLength} questions</p>`
+    <p class="right-percentage">${resultCorrect.toFixed(0)} %</p>
+    <p class="right-answers">${correctAnswer}/${questionLength} questions</p>`
   rightNumberQuestion.appendChild(rightResultDisplay)
 }
 
@@ -57,8 +57,8 @@ const startPageResultIncorrect = () => {
   let wrongResultDisplay = document.createElement(`div`)
   wrongResultDisplay.classList.add(`incorrect-display-results`)
   wrongResultDisplay.innerHTML = `
-    <p>${resultIncorrect.toFixed(2)} %</p>
-    <p>${incorrectAnswer}/${questionLength} questions</p>`
+    <p class="wrong-percentage">${resultIncorrect.toFixed(0)} %</p>
+    <p class="wrong-answers">${incorrectAnswer}/${questionLength} questions</p>`
   wrongNumberQuestion.appendChild(wrongResultDisplay)
 }
 
@@ -72,10 +72,21 @@ let percentageCorrect = (correctAnswer / questionLength) * 100
 console.log(percentageCorrect)
 
 const textResultMessage = () => {
+  const firstText = document.querySelector(`.congrat`)
+  const secondText = document.querySelector(`.passedORfail`)
+  const thirdText = document.querySelector(`.final-message`)
   if (percentageCorrect >= 60) {
-    console.log(`VA BENE`)
+    firstText.innerText = `Congratulation!`
+    secondText.innerText = `You passed the exam.`
+    secondText.style.color = `#00ffff`
+    thirdText.innerText = `We'll send you the certificate in few minutes. Check your email
+    (including promotion / spam folder)`
   } else {
-    console.log(`NO BUONO`)
+    firstText.innerText = `We're sorry :(`
+    secondText.innerText = `You did not passed the exam.`
+    secondText.style.color = `#c2128d`
+    thirdText.innerText = `We'll send you a link for a new test sheet in few minutes. Check your email
+    (including promotion / spam folder)`
   }
 }
 
