@@ -384,3 +384,22 @@ circle {
   font-size: 1rem;
   z-index: 2;
 }
+
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.7); /* Bordo bianco trasparente */
+  border-radius: 4px; /* Arrotonda gli angoli */
+  outline: none; /* Rimuove il bordo predefinito */
+  cursor: pointer;
+}
+
+/* Stile per quando la checkbox è selezionata */
+.welcome-checkbox {
+  background-color: rgba(255, 255, 255, 0.075); /* Colore di sfondo bianco trasparente */
+  border-color: rgba(255, 255, 255, 0.7); /* Bordo bianco trasparente */
+}
