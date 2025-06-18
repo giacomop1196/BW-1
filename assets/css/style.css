@@ -126,10 +126,34 @@ body {
 
 .welcome-title {
   font-size: 70px;
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 0;
 }
-
+.welcome-main > p {
+  margin: 0;
+  margin-top: -35px;
+  margin-bottom: 20px;
+  font-weight: 350;
+}
+.welcome-main > h1 {
+  font-weight: 300;
+}
 .welcome-subtitle {
   font-size: 40px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+.main-rules > p {
+  width: 50%;
+  margin-bottom: 40px;
+  margin-top: 1%;
+}
+.main-rules > ul {
+  margin-bottom: 8%;
+  padding-left: 2%;
+}
+li {
+  margin: 5px 0;
 }
 
 /* "Results page START" */
@@ -161,8 +185,10 @@ body {
 }
 
 .chart-container {
-  width: 480px;
-  height: 480px;
+  min-width: 400px;
+  min-height: 400px;
+  max-width: 480px;
+  max-height: 480px;
 }
 
 .doughnut-chart-exitPool-Correct {
