@@ -1,26 +1,29 @@
-let correctAnswer = sessionStorage.getItem(`correctAnswerCount`)
-let incorrectAnswer = sessionStorage.getItem(`incorrectAnswerCount`)
-let questionLength = sessionStorage.getItem(`questionLength`)
+let correctAnswer = sessionStorage.getItem(`correctAnswerCount`) // Collettiamo il NUMERO di domande Corrette
+let incorrectAnswer = sessionStorage.getItem(`incorrectAnswerCount`) // Collettiamo il NUMERO di domande Sbagliate
+let questionLength = sessionStorage.getItem(`questionLength`) // Collettiamo il NUMERO totale di domande poste dal quiz
+
+// Da qua inizia la creazione del Chart a Ciambella (In fondo all'HTML dobbiamo caricare uno <script> preso da ChartJS)
 
 const chartData = {
-  labels: [`Wrong`, `Correct`],
-  data: [incorrectAnswer, correctAnswer],
+  labels: [`Wrong`, `Correct`], // Porzione di etichette `Wrong` & `Correct` sulla Ciambella
+  data: [incorrectAnswer, correctAnswer], // Porzione di VALORI precedentemente collettati `Wrong` & `Correct` sulla Ciambella
 }
 
-const chart = document.getElementById(`mainChart`)
+const chart = document.getElementById(`mainChart`) // Creazione Ciambella
 
 new Chart(chart, {
-  type: "doughnut",
+  type: "doughnut", // Tipo di Chart `doughnut`(Ciambella), `pie`(Torta), etc.
   data: {
-    labels: chartData.labels,
+    labels: chartData.labels, // Richiamo alle etichette da inserire nel Chart
     datasets: [
       {
         label: `Test result`,
-        data: chartData.data,
+        data: chartData.data, // Richiamo i VALORI da inserire e "spalmare" nel Chart
       },
     ],
   },
   options: {
+    // opzioni Grafiche del Chart
     borderWidth: 0,
     borderRadius: 2,
     cutout: `70%`,
@@ -28,7 +31,7 @@ new Chart(chart, {
     backgroundColor: [` #d20094`, `#00ffff`],
     plugins: {
       legend: {
-        display: false,
+        display: false, // Eliminiamo la Legenda del Chart
       },
     },
   },
@@ -36,7 +39,7 @@ new Chart(chart, {
 
 const rightNumberQuestion = document.querySelector(
   `.doughnut-chart-exitPool-Correct`
-)
+) // Richiamiamo e appendo il box a SX della pagina Results dove colletteremo il NUMERO e la PERCETUALE di risposte GIUSTE
 
 const startPageResultCorrect = () => {
   let resultCorrect = (correctAnswer / questionLength) * 100
@@ -50,7 +53,7 @@ const startPageResultCorrect = () => {
 
 const wrongNumberQuestion = document.querySelector(
   `.doughnut-chart-exitPool-Wrong`
-)
+) // Richiamiamo e appendo il box a DX della pagina Results dove colletteremo il NUMERO e la PERCETUALE di risposte SBAGLIATE
 
 const startPageResultIncorrect = () => {
   let resultIncorrect = (incorrectAnswer / questionLength) * 100
@@ -63,11 +66,12 @@ const startPageResultIncorrect = () => {
 }
 
 window.onload = function () {
+  // Al caricamento della pagina Result, invochiamo le funzioni di cui sopra
   startPageResultIncorrect()
   startPageResultCorrect()
 }
 
-let percentageCorrect = (correctAnswer / questionLength) * 100
+let percentageCorrect = (correctAnswer / questionLength) * 100 // Creiamo il Testo (positivo o negativo) da far apparire al centro del Chart a fine quiz in base alla percentuale riscontrata
 
 console.log(percentageCorrect)
 

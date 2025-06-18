@@ -126,35 +126,47 @@ let formQuestions = document.querySelector(".form-domande")
 let questionTracker = document.querySelector(".num-quest")
 let timeLeft = 60
 
-const circle = document.querySelector(".progress");
-const radius = -60; // Il raggio del tuo cerchio (dal tuo SVG r="90")
-const circumference = 2 * Math.PI * radius;
+questions[currentQuestionIndex].type
+
+const circle = document.querySelector(".progress")
+const radius = -60 // Il raggio del tuo cerchio (dal tuo SVG r="90")
+const circumference = 2 * Math.PI * radius
 
 function startTimer() {
-  clearInterval(timer); // Azzera qualsiasi timer precedente
+  clearInterval(timer) // Azzera qualsiasi timer precedente
+  if (questions[currentQuestionIndex].type === `boolean`) {
+    timeLeft = 30 // Resetta il tempo per la nuova domanda per i Booleani
+  } else {
+    timeLeft = 60 // Resetta il tempo per la nuova domanda per i non Booleani
+  }
 
-  timeLeft = 60; // Resetta il tempo per la nuova domanda
-  timerDisplay.textContent = timeLeft; // Aggiorna il testo del timer
-
+  timerDisplay.textContent = timeLeft // Aggiorna il testo del timer
   // Resetta l'animazione circolare all'inizio
-  circle.style.strokeDashoffset = 0; // Azzera l'offset per ricominciare da capo
+  circle.style.strokeDashoffset = 0 // Azzera l'offset per ricominciare da capo
 
   timer = setInterval(() => {
-    timeLeft--;
-    timerDisplay.textContent = timeLeft; // Aggiorna il testo del timer
+    timeLeft--
+    timerDisplay.textContent = timeLeft // Aggiorna il testo del timer
 
     // Logica per l'animazione del cerchio
-    const offset = circumference * (1 - timeLeft / 60); // Usa '60' come durata totale
-    circle.style.strokeDashoffset = offset;
-    circle.style.strokeLinecap = 'butt'
-    if (timeLeft <= 0) {
-      clearInterval(timer); // Se il tempo è <= 0, ferma il timer
-      incorrectAnswerCount++; // Incrementa le risposte sbagliate
-      currentQuestionIndex++; // Passa alla domanda successiva
-      displayQuestions(); // Chiamata alla funzione per mostrare la prossima domanda
-      console.log("Risposte incorrette:", incorrectAnswerCount);
+    if (questions[currentQuestionIndex].type === `boolean`) {
+      const offset = circumference * (1 - timeLeft / 30) // Usa '30' come durata totale per i Booleani
+      circle.style.strokeDashoffset = offset
+      circle.style.strokeLinecap = "butt"
+    } else {
+      const offset = circumference * (1 - timeLeft / 60) // Usa '60' come durata totale per i non Booleani
+      circle.style.strokeDashoffset = offset
+      circle.style.strokeLinecap = "butt"
     }
-  }, 1000); // Esegui ogni secondo
+
+    if (timeLeft <= 0) {
+      clearInterval(timer) // Se il tempo è <= 0, ferma il timer
+      incorrectAnswerCount++ // Incrementa le risposte sbagliate
+      currentQuestionIndex++ // Passa alla domanda successiva
+      displayQuestions() // Chiamata alla funzione per mostrare la prossima domanda
+      console.log("Risposte incorrette:", incorrectAnswerCount)
+    }
+  }, 1000) // Esegui ogni secondo
 }
 
 console.log(incorrectAnswerCount)
