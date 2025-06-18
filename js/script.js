@@ -123,7 +123,7 @@ let timer
 let questionTitle = document.querySelector(".questions-title")
 let timerDisplay = document.querySelector(".sessanta")
 let formQuestions = document.querySelector(".form-domande")
-let questionTracker = document.querySelector("footer p")
+let questionTracker = document.querySelector(".num-quest")
 let timeLeft = 60
 
 const circle = document.querySelector(".progress");

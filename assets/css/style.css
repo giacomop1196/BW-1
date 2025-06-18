@@ -293,7 +293,6 @@ body {
   margin-right: auto;
   justify-content: space-between;
   flex-direction: column;
-  background-color: red;
 }
 
 .text-center {
@@ -307,7 +306,6 @@ body {
   height: 20vh;
   display: flex;
   margin-top: 0;
-  background-color: green;
   font-size: 40px;
   font-family: "Outfit", sans-serif;
 }
@@ -342,7 +340,6 @@ body {
 .num-quest {
   height: 10vh;
   margin-bottom: 0;
-  background-color: green;
 }
 
 .timer {
@@ -373,7 +370,7 @@ body {
 .timer-p {
   margin-top: auto;
   margin-bottom: auto;
-  font-size: small;
+  font-size: xx-small;
 }
 
 /* ---------- FEEDBACK PAGE ---------- */
@@ -447,7 +444,7 @@ svg {
 
 circle {
   fill: none;
-  stroke-width: 20;
+  stroke-width: 14;
   stroke-linecap: round;
   margin-bottom: 20px;
 }
@@ -465,6 +462,6 @@ circle {
 
 .timer-text {
   position: absolute;
-  font-size: 1rem;
+  font-size: 0.2rem;
   z-index: 2;
 }
