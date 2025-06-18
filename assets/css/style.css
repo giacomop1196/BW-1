@@ -556,3 +556,166 @@ circle {
   margin: 0;
   margin-bottom: 30px;
 }
+
+/* Typewriter effect 1 */
+
+@keyframes typing {
+  0.0000% {
+    content: "";
+  }
+  10% {
+    content: "e";
+  }
+  20% {
+    content: "el";
+  }
+  30% {
+    content: "elc";
+  }
+  40% {
+    content: "elco";
+  }
+  50% {
+    content: "elcom";
+  }
+  60% {
+    content: "elcome";
+  }
+  70% {
+    content: "elcome ";
+  }
+  90% {
+    content: "elcome t";
+  }
+  100% {
+    content: "elcome to";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 3s steps(30) 1 forwards;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s step-end infinite, caretFade 0.1s ease-out 3s forwards;
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%,
+    100% {
+      content: "elcome to";
+    }
+  }
+
+  .typewriter::before {
+    content: "elcome to";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
+
+@keyframes caretFade {
+  to {
+    opacity: 0;
+    border-right: none;
+  }
+}
+
+/* Typewriter effect 2 */
+
+@keyframes typing3 {
+  0.0000% {
+    content: "y";
+  }
+  13% {
+    content: "yo";
+  }
+  26% {
+    content: "you";
+  }
+  38% {
+    content: "your";
+  }
+  50% {
+    content: "your ";
+  }
+  62% {
+    content: "your e";
+  }
+  72% {
+    content: "your ex";
+  }
+  85% {
+    content: "your exa ";
+  }
+  100% {
+    content: "your exam";
+  }
+}
+
+@keyframes blink3 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter3 {
+  --caret: currentcolor;
+  opacity: 0;
+  animation: fadeIn3 0.5s ease-out 3s forwards;
+}
+
+.typewriter3::before {
+  content: "";
+  animation: typing3 2.8s steps(30) 1 forwards;
+  animation-delay: 3s;
+}
+
+.typewriter3::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink3 0.5s step-end infinite 3s,
+    caretFade3 0.1s ease-out 5.8s forwards;
+}
+
+@keyframes caretFade3 {
+  to {
+    opacity: 0;
+    border-right: none;
+  }
+}
+
+@keyframes fadeIn3 {
+  to {
+    opacity: 1;
+  }
+}
