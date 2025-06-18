@@ -334,8 +334,8 @@ footer {
   border-radius: 50%;
   border: 15px solid rgba(0, 0, 0, 0.199);
   color: white;
-  margin-right: 120px;
-  margin-top: 30px;
+  margin-right: 0px;
+  margin-top: 20px;
   padding: 0;
   justify-content: center;
   align-items: center;
@@ -346,6 +346,10 @@ footer {
 .timer-container {
   display: flex;
   justify-content: space-between;
+  width: auto;
+  height: auto;
+  align-items: center;
+
 }
 
 .sessanta {
@@ -356,7 +360,9 @@ footer {
 .timer-p {
   margin-top: auto;
   margin-bottom: auto;
-  font-size: small;
+  font-size: large;
+  padding-top: auto;
+  padding-bottom: auto;
 }
 
 /* ---------- FEEDBACK PAGE ---------- */
@@ -413,8 +419,8 @@ header img {
 /* ========== FEEDBACK PAGE ========== */
 .countdown-container {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
   margin-right: 90px;
   margin-top: 45px;
   justify-content: center;
@@ -451,3 +457,5 @@ circle {
   font-size: 1rem;
   z-index: 2;
 }
+
+
