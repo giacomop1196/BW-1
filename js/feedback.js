@@ -4,7 +4,7 @@
 const stars = [];
 const span = document.getElementById("stars");
 let selectedRating = 0;
-let error = document.querySelector('.error-index')
+let error = document.querySelector('.error-feedback')
 
 for (let i = 1; i <= 10; i++) {
   const img = document.createElement('img');
@@ -32,8 +32,9 @@ for (let i = 1; i <= 10; i++) {
 // DIV COMMENT
 const button = document.getElementsByClassName('button-style')[0];
 const feedback = document.querySelector('.feedback');
-const restart = document.getElementById('restart')
-const feedbackTextTitle = document.getElementById('feedback-text')
+const restart = document.getElementById('restart');
+const feedbackTextTitle = document.getElementById('feedback-text');
+const modal = document.querySelector('.popup')
 restart.style.display = 'none';
 
 button.addEventListener('click', (event) => {
@@ -43,11 +44,9 @@ button.addEventListener('click', (event) => {
 
   if (feedbackText !== '' && selectedRating > 0) {
     error.innerText = ""
-    button.style.display = 'none';
-    feedback.style.display = 'none';
-    restart.style.display = '';
-    feedbackTextTitle.innerText = "Do you want to repeat the test?";
+    modal.classList.remove('hidden');
   } else {
+    error.style.display = 'block';
     error.innerText = "Please write a comment and select at least one star."
   }
 });

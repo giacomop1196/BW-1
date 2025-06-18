@@ -56,7 +56,7 @@ body {
 }
 
 /* Quando la checkbox è selezionata, mantiene lo sfondo trasparente */
-.checkbox-container input.welcome-checkbox:checked ~ .checkmark {
+.checkbox-container input.welcome-checkbox:checked~.checkmark {
   background-color: transparent;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 /* Mostra il segno di spunta quando la checkbox è selezionata */
-.checkbox-container input.welcome-checkbox:checked ~ .checkmark:after {
+.checkbox-container input.welcome-checkbox:checked~.checkmark:after {
   display: block;
 }
 
@@ -82,6 +82,7 @@ body {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
+
 .white {
   color: white;
 }
@@ -91,7 +92,14 @@ body {
 }
 
 .error-index {
+  display: none;
   color: red;
+  background-color: rgba(243, 24, 24, 0.217);
+  padding: 8px;
+  padding-left: 18px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  clip-path: polygon(0% 50%, 5% 0%, 100% 0%, 100% 100%, 5% 100%);
 }
 
 .welcome-main {
@@ -128,29 +136,35 @@ body {
   font-family: 'Outfit', sans-serif;
   margin-bottom: 0;
 }
-.welcome-main > p {
+
+.welcome-main>p {
   margin: 0;
   margin-top: -35px;
   margin-bottom: 20px;
   font-weight: 350;
 }
-.welcome-main > h1 {
+
+.welcome-main>h1 {
   font-weight: 300;
 }
+
 .welcome-subtitle {
   font-size: 40px;
   margin-bottom: 0;
   margin-top: 5px;
 }
-.main-rules > p {
+
+.main-rules>p {
   width: 50%;
   margin-bottom: 40px;
   margin-top: 1%;
 }
-.main-rules > ul {
+
+.main-rules>ul {
   margin-bottom: 6%;
   padding-left: 2%;
 }
+
 li {
   margin: 5px 0;
 }
@@ -449,6 +463,14 @@ header img {
   margin-top: 20px;
 }
 
+.error-feedback {
+  display: none;
+  color: red;
+  background-color: rgba(243, 24, 24, 0.217);
+  padding: 4px;
+  border-radius: 20px;
+}
+
 /* ========== FEEDBACK PAGE ========== */
 .countdown-container {
   position: relative;
@@ -489,4 +511,36 @@ circle {
   position: absolute;
   font-size: 0.2rem;
   z-index: 2;
+}
+
+/* MODALE FEEDBACK */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background-image: linear-gradient(#d20094, #900080);
+  padding: 130px 100px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content p {
+  font-size: 30px;
+  margin-bottom: 45px;
+  color: white;
 }
