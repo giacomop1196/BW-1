@@ -82,7 +82,6 @@ body {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
-
 .white {
   color: white;
 }
@@ -149,7 +148,7 @@ body {
   margin-top: 1%;
 }
 .main-rules > ul {
-  margin-bottom: 8%;
+  margin-bottom: 6%;
   padding-left: 2%;
 }
 li {
