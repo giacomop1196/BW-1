@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Feedback</title>
   </head>
@@ -12,30 +11,31 @@
       <img src="./assets/images/epicode_logo.png" alt="Epicode">
     </header>
 
-    <main class="feedback-main">
-      <h2>Tell us how it's going</h2>
+  <main class="feedback-main">
+    <h2>Tell us how it's going</h2>
 
-      <div class="star">
-        <p>
-          From 0 to 10, how likely are you to recommend EPICODE
+    <div class="star">
+      <p>
+        From 0 to 10, how likely are you to recommend EPICODE
+        <br>
+        to a friend or a colleague?
+      </p>
+      <div id="stars"></div>
+    </div>
 
-          <br>
+    <div class="comment">
+      <p>Leave us an open feedback about your experience so far</p>
+      <p class="error-index"></p>
+      
+      <form action="">
+        <input type="text" class="feedback" placeholder="Write your comment here" required>
+        <button class="button-style" type="submit">MORE INFO</button>
+        <a href="./index.html" class="button-style restart" id="restart">RESTART</a>
+      </form>
+    </div>
+  </main>
 
-          to a friend or a colleague?
-        </p>
+  <script src="./js/feedback.js"></script>
+</body>
 
-        <div id="stars"></div>
-      </div>
-
-      <div class="comment">
-        <p>Leave us an open feedback about your experience so far</p>
-
-        <input type="text" class="feedback" placeholder="Write your comment here">
-
-        <button class="button-style">MORE INFO</button>
-      </div>
-    </main>
-
-    <script src="./js/feedback.js"></script>
-  </body>
 </html>
