@@ -33,6 +33,7 @@ for (let i = 1; i <= 10; i++) {
 const button = document.getElementsByClassName('button-style')[0];
 const feedback = document.querySelector('.feedback');
 const restart = document.getElementById('restart')
+const feedbackTextTitle = document.getElementById('feedback-text')
 restart.style.display = 'none';
 
 button.addEventListener('click', (event) => {
@@ -45,7 +46,7 @@ button.addEventListener('click', (event) => {
     button.style.display = 'none';
     feedback.style.display = 'none';
     restart.style.display = '';
-
+    feedbackTextTitle.innerText = "Do you want to repeat the test?";
   } else {
     error.innerText = "Please write a comment and select at least one star."
   }
