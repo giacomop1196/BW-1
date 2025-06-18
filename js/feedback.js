@@ -3,25 +3,28 @@
 // DIV STAR
 const stars = [];
 const span = document.getElementById("stars");
+let selectedRating = 0;
+let error = document.querySelector('.error-index')
 
-for(let i = 1; i <=10; i++){
+for (let i = 1; i <= 10; i++) {
   const img = document.createElement('img');
   img.src = '../assets/images/star.copy.svg';
   img.dataset.index = i;
   img.classList.add('star');
   img.style.margin = '10px';
 
-  img.addEventListener('click',() => {
-    const index = parseInt(img.dataset.index) -1;
-    for(let j = 0; j < stars.length; j++){
-      if(j <= index) {
+  img.addEventListener('click', () => {
+    const index = parseInt(img.dataset.index);
+    selectedRating = index;
+    for (let j = 0; j < stars.length; j++) {
+      if (j < index) {
         stars[j].src = '../assets/images/star.svg';
       } else {
         stars[j].src = '../assets/images/star.copy.svg';
       }
     }
   });
-  
+
   stars.push(img);
   span.appendChild(img);
 }
@@ -29,14 +32,28 @@ for(let i = 1; i <=10; i++){
 // DIV COMMENT
 const button = document.getElementsByClassName('button-style')[0];
 const feedback = document.querySelector('.feedback');
+const restart = document.getElementById('restart')
+restart.style.display = 'none';
 
-button.addEventListener('click', () => {
-  alert('Feedback Inviato');
-  location.reload();
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const feedbackText = feedback.value.trim();
+
+  if (feedbackText !== '' && selectedRating > 0) {
+    error.innerText = ""
+    button.style.display = 'none';
+    feedback.style.display = 'none';
+    restart.style.display = '';
+
+  } else {
+    error.innerText = "Please write a comment and select at least one star."
+  }
 });
 
 feedback.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
+    event.preventDefault();
     button.click();
   }
 });

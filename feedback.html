@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Feedback</title>
-  </head>
-  <body class="background-img">
-    <header>
-      <img src="./assets/images/epicode_logo.png" alt="Epicode">
-    </header>
 
-    <main class="feedback-main">
-      <h2>Tell us how it's going</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Feedback</title>
+  <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon">
+</head>
 
-      <div class="star">
-        <p>
-          From 0 to 10, how likely are you to recommend EPICODE
+<body class="background-img">
+  <header>
+    <img src="./assets/images/epicode_logo.png" alt="Epicode">
+  </header>
 
-          <br>
+  <main class="feedback-main">
+    <h2>Tell us how it's going</h2>
 
-          to a friend or a colleague?
-        </p>
+    <div class="star">
+      <p>
+        From 0 to 10, how likely are you to recommend EPICODE
+        <br>
+        to a friend or a colleague?
+      </p>
+      <div id="stars"></div>
+    </div>
 
-        <div id="stars"></div>
-      </div>
+    <div class="comment">
+      <p>Leave us an open feedback about your experience so far</p>
+      <p class="error-index"></p>
+      
+      <form action="">
+        <input type="text" class="feedback" placeholder="Write your comment here" required>
+        <button class="button-style" type="submit">MORE INFO</button>
+        <a href="./index.html" class="button-style restart" id="restart">RESTART</a>
+      </form>
+    </div>
+  </main>
 
-      <div class="comment">
-        <p>Leave us an open feedback about your experience so far</p>
+  <script src="./js/feedback.js"></script>
+</body>
 
-        <input type="text" class="feedback" placeholder="Write your comment here">
-
-        <button class="button-style">MORE INFO</button>
-      </div>
-    </main>
-
-    <script src="./js/feedback.js"></script>
-  </body>
 </html>

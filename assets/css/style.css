@@ -339,6 +339,10 @@ header img {
   color: #e7e7eb;
 }
 
+.restart {
+  margin-top: 20px;
+}
+
 /* ========== FEEDBACK PAGE ========== */
 .countdown-container {
   position: relative;
