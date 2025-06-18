@@ -7,6 +7,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  font-family: "Inter", sans-serif;
 }
 
 .background-img {
@@ -22,6 +23,10 @@ body {
 
 .purple {
   color: #c2128d;
+}
+
+.error-index {
+  color: red;
 }
 
 .welcome-main {
@@ -80,7 +85,7 @@ body {
   font-size: 3.5em;
   font-weight: 600;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .result-title p {
@@ -90,8 +95,8 @@ body {
 }
 
 .chart-container {
-  width: 500px;
-  height: 500px;
+  width: 480px;
+  height: 480px;
 }
 
 .doughnut-chart-exitPool-Correct {
@@ -101,6 +106,7 @@ body {
   justify-content: center;
   width: 165px;
 }
+
 .doughnut-chart-exitPool-Wrong {
   display: flex;
   flex-direction: column;
@@ -114,7 +120,7 @@ body {
   flex-direction: row;
   text-align: center;
   justify-content: space-around;
-  padding: 50px 60px;
+  padding: 40px 60px;
 }
 
 .correct-result,
@@ -136,6 +142,7 @@ body {
 .right-percentage {
   padding-right: 20px;
 }
+
 .wrong-percentage {
   padding-left: 20px;
 }
@@ -151,7 +158,7 @@ body {
   width: 50%;
   position: relative;
   left: 25%;
-  bottom: 67%;
+  bottom: 70%;
 }
 
 .congrat {
@@ -188,7 +195,7 @@ body {
 .resultPage-rateButton {
   font-family: "Inter", sans-serif;
   display: inline-block;
-  padding: 20px 70px;
+  padding: 20px 75px;
   background-color: transparent;
   color: white;
   font-weight: 600;
@@ -206,8 +213,7 @@ body {
 }
 
 .rateUs-link {
-  padding-top: 20px;
-  padding-bottom: 150px;
+  padding-bottom: 40px;
 }
 
 /* "Results page END" */
@@ -240,7 +246,8 @@ body {
 }
 
 .questions-title {
-  font-size: 60px;
+  font-size: 40px;
+  font-family: "Outfit", sans-serif;
 }
 
 .button-4-questions:hover {
@@ -282,6 +289,7 @@ footer {
 .timer-p {
   margin-top: auto;
   margin-bottom: auto;
+  font-size: small;
 }
 
 /* ---------- FEEDBACK PAGE ---------- */
@@ -331,3 +339,48 @@ header img {
   color: #e7e7eb;
 }
 
+.restart {
+  margin-top: 20px;
+}
+
+/* ========== FEEDBACK PAGE ========== */
+.countdown-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-right: 90px;
+  margin-top: 45px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+svg {
+  transform: rotate(-90deg);
+  position: relative;
+  z-index: 1;
+}
+
+circle {
+  fill: none;
+  stroke-width: 20;
+  stroke-linecap: round;
+  margin-bottom: 20px;
+}
+
+.bg {
+  stroke: #2422223e;
+}
+
+.progress {
+  stroke: #00FFFF;
+  stroke-dasharray: 565.48;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  font-size: 1rem;
+  z-index: 2;
+}

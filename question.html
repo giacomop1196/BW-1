@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz EPICODE</title>
-    <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body class="background-img">
-    <header>
-      <div class="timer-container">
-        <img src="/assets/images/epicode_logo.png" alt="logo" /> 
 
-        <div class="timer text-center"> <!--timer con il testo dentro-->
-          <p class="timer-p">seconds</p>
-          <p class="sessanta">60</p>
-          <p class="timer-p">Remaining</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz EPICODE</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon">
+</head>
+
+<body class="background-img">
+  <header>
+    <div class="timer-container">
+      <img src="/assets/images/epicode_logo.png" alt="logo" />
+
+      <!--timer con il testo dentro-->
+      <div class="countdown-container text-center ">
+        <svg width="150" height="150">
+          <circle class="bg" cx="75" cy="75" r="60" />
+          <circle class="progress" cx="75" cy="75" r="60" />
+        </svg>
+        <div class="timer-text-container timer-text">
+          <p class="timer-p white">seconds</p>
+          <div class="sessanta white" id="timer"></div>
+           <p class="timer-p white">Remaining</p>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <h1 class="text-center white questions-title"></h1>
-      <!--h3 controllato dal js, qui appariranno le domande -->
+  <main>
+    <p class="text-center white questions-title"></p>
+    <!--h3 controllato dal js, qui appariranno le domande -->
 
-      <form class="text-center form-domande"> <!--buttons-->
-        <input type="button" class="button-4-questions" value="Risposta 1" />
-        <input type="button" class="button-4-questions" value="Risposta 2" />
-        <input type="button" class="button-4-questions" value="Risposta 3" />
-        <input type="button" class="button-4-questions" value="Risposta 4" />
-      </form>
+    <form class="text-center form-domande"> 
+    <!--buttons-->
+    </form>
 
-      <footer class="text-center">
-        <p class="text-center white">
-          Domanda 1 <span class="purple">/10</span>
-        </p>
-        <!--tracciamento dell array, domande -->
-      </footer>
-    </main>
-  <script src="./js/script.js"></script></body>
+    <footer class="text-center">
+      <p class="text-center white">
+        Domanda 1 <span class="purple">/10</span>
+      </p>
+      <!--tracciamento dell array, domande -->
+    </footer>
+  </main>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>

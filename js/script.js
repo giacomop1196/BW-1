@@ -126,22 +126,35 @@ let formQuestions = document.querySelector(".form-domande")
 let questionTracker = document.querySelector("footer p")
 let timeLeft = 60
 
+const circle = document.querySelector(".progress");
+const radius = -60; // Il raggio del tuo cerchio (dal tuo SVG r="90")
+const circumference = 2 * Math.PI * radius;
+
 function startTimer() {
-  clearInterval(timer) // é la funzione che azzera il timer
-  timeLeft = 60
-  timerDisplay.textContent = timeLeft
+  clearInterval(timer); // Azzera qualsiasi timer precedente
+
+  timeLeft = 60; // Resetta il tempo per la nuova domanda
+  timerDisplay.textContent = timeLeft; // Aggiorna il testo del timer
+
+  // Resetta l'animazione circolare all'inizio
+  circle.style.strokeDashoffset = 0; // Azzera l'offset per ricominciare da capo
+
   timer = setInterval(() => {
-    // é la funzione che fa partire il countdown
-    timeLeft--
-    timerDisplay.textContent = timeLeft
+    timeLeft--;
+    timerDisplay.textContent = timeLeft; // Aggiorna il testo del timer
+
+    // Logica per l'animazione del cerchio
+    const offset = circumference * (1 - timeLeft / 60); // Usa '60' come durata totale
+    circle.style.strokeDashoffset = offset;
+
     if (timeLeft <= 0) {
-      clearInterval(timer) // Se il tempo é <- 0 , resettiamo il timer
-      incorrectAnswerCount++
-      currentQuestionIndex++
-      displayQuestions()
-      console.log(incorrectAnswerCount)
+      clearInterval(timer); // Se il tempo è <= 0, ferma il timer
+      incorrectAnswerCount++; // Incrementa le risposte sbagliate
+      currentQuestionIndex++; // Passa alla domanda successiva
+      displayQuestions(); // Chiamata alla funzione per mostrare la prossima domanda
+      console.log("Risposte incorrette:", incorrectAnswerCount);
     }
-  }, 1000) // per farlo contare in secondi
+  }, 1000); // Esegui ogni secondo
 }
 
 console.log(incorrectAnswerCount)
@@ -169,7 +182,7 @@ function displayQuestions() {
 
       formQuestions.appendChild(button) // abbiamo appeso questi bottoni dentro il form
     })
-    questionTracker.innerHTML = `Domanda ${
+    questionTracker.innerHTML = `QUESTION ${
       currentQuestionIndex + 1 // serve per tenere traccia del numero della domanda
     } <span class="purple">/${questions.length}</span> ` //quante domande ci sono all'interno dell'aray
   } else {
