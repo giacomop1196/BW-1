@@ -146,7 +146,7 @@ function startTimer() {
     // Logica per l'animazione del cerchio
     const offset = circumference * (1 - timeLeft / 60); // Usa '60' come durata totale
     circle.style.strokeDashoffset = offset;
-
+    circle.style.strokeLinecap = 'butt'
     if (timeLeft <= 0) {
       clearInterval(timer); // Se il tempo è <= 0, ferma il timer
       incorrectAnswerCount++; // Incrementa le risposte sbagliate
