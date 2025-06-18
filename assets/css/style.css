@@ -17,6 +17,73 @@ body {
   background-position: center center;
 }
 
+/* Stile per il contenitore della checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Nasconde la checkbox originale del browser */
+.checkbox-container input.welcome-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Crea la checkbox personalizzata (trasparente con bordo bianco) */
+.checkmark {
+  position: absolute;
+  top: 10;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+
+/* Aggiusta il posizionamento del checkmark per allinearlo al centro del testo */
+.checkbox-container p {
+  margin-left: 8px;
+}
+
+/* Quando la checkbox è selezionata, mantiene lo sfondo trasparente */
+.checkbox-container input.welcome-checkbox:checked~.checkmark {
+  background-color: transparent;
+}
+
+/* Crea il segno di spunta (bianco) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Mostra il segno di spunta quando la checkbox è selezionata */
+.checkbox-container input.welcome-checkbox:checked~.checkmark:after {
+  display: block;
+}
+
+/* Stile del segno di spunta */
+.checkbox-container .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
 .white {
   color: white;
 }
@@ -383,23 +450,4 @@ circle {
   position: absolute;
   font-size: 1rem;
   z-index: 2;
-}
-
-
-input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.7); /* Bordo bianco trasparente */
-  border-radius: 4px; /* Arrotonda gli angoli */
-  outline: none; /* Rimuove il bordo predefinito */
-  cursor: pointer;
-}
-
-/* Stile per quando la checkbox è selezionata */
-.welcome-checkbox {
-  background-color: rgba(255, 255, 255, 0.075); /* Colore di sfondo bianco trasparente */
-  border-color: rgba(255, 255, 255, 0.7); /* Bordo bianco trasparente */
 }
