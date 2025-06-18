@@ -10,6 +10,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+i {
+  margin-right: 3px;
+}
+
 .background-img {
   background-image: url("/assets/images/bg.jpg");
   background-repeat: no-repeat;
@@ -56,7 +60,7 @@ body {
 }
 
 /* Quando la checkbox è selezionata, mantiene lo sfondo trasparente */
-.checkbox-container input.welcome-checkbox:checked~.checkmark {
+.checkbox-container input.welcome-checkbox:checked ~ .checkmark {
   background-color: transparent;
 }
 
@@ -68,7 +72,7 @@ body {
 }
 
 /* Mostra il segno di spunta quando la checkbox è selezionata */
-.checkbox-container input.welcome-checkbox:checked~.checkmark:after {
+.checkbox-container input.welcome-checkbox:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -133,18 +137,18 @@ body {
 
 .welcome-title {
   font-size: 70px;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   margin-bottom: 0;
 }
 
-.welcome-main>p {
+.welcome-main > p {
   margin: 0;
   margin-top: -35px;
   margin-bottom: 20px;
   font-weight: 350;
 }
 
-.welcome-main>h1 {
+.welcome-main > h1 {
   font-weight: 300;
 }
 
@@ -154,13 +158,13 @@ body {
   margin-top: 5px;
 }
 
-.main-rules>p {
+.main-rules > p {
   width: 50%;
   margin-bottom: 40px;
   margin-top: 1%;
 }
 
-.main-rules>ul {
+.main-rules > ul {
   margin-bottom: 6%;
   padding-left: 2%;
 }
@@ -435,9 +439,10 @@ header img {
 }
 
 .star p,
-.comment p {
+.comment > p {
   font-size: 30px;
-  margin: 0;
+  margin: 8px auto;
+  text-align: center;
 }
 
 #stars {
@@ -467,7 +472,8 @@ header img {
   display: none;
   color: red;
   background-color: rgba(243, 24, 24, 0.217);
-  padding: 4px;
+  padding: 4px auto;
+  width: 50%;
   border-radius: 20px;
 }
 
@@ -533,7 +539,7 @@ circle {
 
 .popup-content {
   background-image: linear-gradient(#d20094, #900080);
-  padding: 130px 100px;
+  padding: 90px 90px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -543,4 +549,10 @@ circle {
   font-size: 30px;
   margin-bottom: 45px;
   color: white;
+}
+
+.popup-content i {
+  font-size: 4.5em;
+  margin: 0;
+  margin-bottom: 30px;
 }
