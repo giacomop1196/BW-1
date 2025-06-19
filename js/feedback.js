@@ -7,7 +7,7 @@ let error = document.querySelector(".error-feedback")
 
 for (let i = 1; i <= 10; i++) {
   const img = document.createElement("img")
-  img.src = "../assets/images/star.copy.svg"
+  img.src = "./assets/images/star.copy.svg"
   img.dataset.index = i
   img.classList.add("star")
   img.style.margin = "10px"
@@ -17,9 +17,9 @@ for (let i = 1; i <= 10; i++) {
     selectedRating = index
     for (let j = 0; j < stars.length; j++) {
       if (j < index) {
-        stars[j].src = "../assets/images/star.svg"
+        stars[j].src = "./assets/images/star.svg"
       } else {
-        stars[j].src = "../assets/images/star.copy.svg"
+        stars[j].src = "./assets/images/star.copy.svg"
       }
     }
   })
@@ -56,4 +56,3 @@ feedback.addEventListener("keydown", (event) => {
     button.click()
   }
 })
-/* ========== FEEDBACK PAGE ========== */
