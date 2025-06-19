@@ -1,76 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
-    <link
-      rel="shortcut icon"
-      href="assets/images/i-logo.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <body class="background-img">
-    <header>
-      <img src="/assets/images/epicode_logo.png" alt="logo" />
-    </header>
-    <main class="welcome-main">
-      <h1 class="white welcome-title" aria-label="Welcome to">
-        W<span class="typewriter"></span>
-      </h1>
-      <p class="white welcome-title" aria-label="your exam">
-        <b><span class="typewriter3"></span></b>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="background-img">
+  <!--HEADER-->
+  <header>
+    <!--LOGO-->
+    <a href="https://epicode.com/it/" target="_blank">
+      <img src="/assets/images/epicode_logo.png" alt="logo" /></a>
+  </header>
+  <!--MAIN-->
+  <main class="welcome-main">
+    <!--TITLE-->
+    <h1 class="white welcome-title" aria-label="Welcome to">
+      W<span class="typewriter"></span>
+    </h1>
+    <p class="white welcome-title" aria-label="your exam">
+      <b><span class="typewriter3"></span></b>
+    </p>
+
+    <h3 class="purple welcome-subtitle">Instructions</h3>
+    <div class="main-rules">
+      <p class="white">
+        We don't expect most engineers to know the answer to all of these
+        questions, so don't worry if you're unsure of a few of them.
       </p>
-      <h3 class="purple welcome-subtitle">Instructions</h3>
-      <div class="main-rules">
-        <p class="white">
-          We don't expect most engineers to know the answer to all of these
-          questions, so don't worry if you're unsure of a few of them.
-        </p>
-        <ul class="white">
-          <li>Each question is <b>timed</b> and can only be answered once.</li>
-          <li>
-            Changing browser tab or opening other windows will
-            <b>invalidate the question.</b>
-          </li>
-          <li>This exam will take approx. <b>0-5 minutes.</b></li>
-        </ul>
+      <ul class="white">
+        <li>Each question is <b>timed</b> and can only be answered once.</li>
+        <li>
+          Changing browser tab or opening other windows will
+          <b>invalidate the question.</b>
+        </li>
+        <li>This exam will take approx. <b>0-5 minutes.</b></li>
+      </ul>
+    </div>
+    <!--FORM-->
+    <form action="">
+      <div class="flex-container">
+        <label class="checkbox-container">
+          <!--CHECKBOX-->
+          <input class="welcome-checkbox" id="myCheckbox" type="checkbox" required />
+          <span class="checkmark"></span>
+          <p class="white">
+            I promise to answer myself without help from anyone
+          </p>
+          <!--ERROR MESSAGE-->
+          <p class="error-index"></p>
+        </label>
+        <!--PROCEED BUTTON-->
+        <button type="button" onclick="startQuiz()" class="button-style">
+          PROCEED
+        </button>
       </div>
-      <form action="">
-        <div class="flex-container">
-          <label class="checkbox-container">
-            <input
-              class="welcome-checkbox"
-              id="myCheckbox"
-              type="checkbox"
-              required
-            />
-            <span class="checkmark"></span>
-            <p class="white">
-              I promise to answer myself without help from anyone
-            </p>
-            <p class="error-index"></p>
-          </label>
-          <button type="button" onclick="startQuiz()" class="button-style">
-            PROCEED
-          </button>
-        </div>
-      </form>
-    </main>
+    </form>
+  </main>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./js/index.js"></script>
-  </body>
+  <!--SCRIPT-->
+  <script src="./js/index.js"></script>
+</body>
+
 </html>

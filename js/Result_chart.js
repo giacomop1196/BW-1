@@ -2,8 +2,8 @@ let correctAnswer = sessionStorage.getItem(`correctAnswerCount`); // Collettiamo
 let incorrectAnswer = sessionStorage.getItem(`incorrectAnswerCount`); // Collettiamo il NUMERO di domande Sbagliate
 let questionLength = sessionStorage.getItem(`questionLength`); // Collettiamo il NUMERO totale di domande poste dal quiz
 
+//FUNCTION CONFETTI
 ("use strict");
-//funzione coriandoli/confetti se il test é sufficiente
 const startConfetti = function () {
   // Globals
   var random = Math.random,
@@ -324,14 +324,14 @@ const textResultMessage = () => {
   const firstText = document.querySelector(`.congrat`);
   const secondText = document.querySelector(`.passedORfail`);
   const thirdText = document.querySelector(`.final-message`);
-  if (percentageCorrect >= 60) {
-    startConfetti();
+  if (percentageCorrect >= 60) { // Se la percentuale di risposte corrette è superiore al 60%
+    startConfetti(); // Invochiamo la funzione per la visualizzazione dei coriandoli
     firstText.innerText = `Congratulation!`;
     secondText.innerText = `You passed the exam.`;
     secondText.style.color = `#00ffff`;
     thirdText.innerText = `We'll send you the certificate in few minutes. Check your email
     (including promotion / spam folder)`;
-  } else {
+  } else { // Se la percentuale di risposte corrette è inferiore al 60%
     firstText.innerText = `We're sorry :(`;
     secondText.innerText = `You did not passed the exam.`;
     secondText.style.color = `#c2128d`;

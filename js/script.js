@@ -1,4 +1,4 @@
-//array delle domande
+//ARRAY DELLE DOMANDE
 const questions = [
   {
     category: "Science: Computers",
@@ -125,8 +125,6 @@ let timerDisplay = document.querySelector(".sessanta")
 let formQuestions = document.querySelector(".form-domande")
 let questionTracker = document.querySelector(".num-quest")
 let timeLeft = 60
-
-questions[currentQuestionIndex].type
 
 const circle = document.querySelector(".progress")
 const radius = -60 // Il raggio del tuo cerchio (dal tuo SVG r="90")

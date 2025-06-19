@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/images/i-logo.png"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Feedback</title>
-  </head>
 
-  <body class="background-img">
-    <header>
-      <img src="./assets/images/epicode_logo.png" alt="Epicode" />
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Feedback</title>
+</head>
 
-    <main class="feedback-main">
-      <h2>Tell us how it's going</h2>
+<body class="background-img">
+  <!--HEADER-->
+  <header>
+    <!--LOGO-->
+    <img src="./assets/images/epicode_logo.png" alt="Epicode" />
+  </header>
 
-      <div class="star">
-        <p>
-          From 0 to 10, how likely are you to recommend EPICODE
-          <br />
-          to a friend or a colleague?
-        </p>
-        <div id="stars"></div>
+  <!--MAIN-->
+  <main class="feedback-main">
+    <h2>Tell us how it's going</h2>
+
+    <!--STAR SECTION-->
+    <div class="star">
+      <p>
+        From 0 to 10, how likely are you to recommend EPICODE
+        <br />
+        to a friend or a colleague?
+      </p>
+      <div id="stars"></div>
+    </div>
+
+    <div class="comment">
+      <p id="feedback-text">
+        Leave us an open feedback about your experience so far
+      </p>
+      <!--ERROR MESSAGE-->
+      <p class="error-feedback"></p>
+      <!--FORM-->
+      <form action="">
+        <input type="text" class="feedback" placeholder="Write your comment here" required />
+        <button class="button-style" type="submit">MORE INFO</button>
+        <a href="./index.html" class="button-style restart" id="restart">RESTART</a>
+      </form>
+    </div>
+
+    <!--MODAL-->
+    <div id="restart-popup" class="popup hidden">
+      <div class="popup-content">
+        <i class="far fa-check-circle"></i>
+        <p>Feedback has been sent successfully</p>
+        <p>Do you want to repeat the test?</p>
+        <!--RESTART BUTTON-->
+        <a href="./index.html" class="button-style restart">RESTART</a>
       </div>
+    </div>
+  </main>
 
-      <div class="comment">
-        <p id="feedback-text">
-          Leave us an open feedback about your experience so far
-        </p>
-        <p class="error-feedback"></p>
+  <!--SCRIPT-->
+  <script src="./js/feedback.js"></script>
+</body>
 
-        <form action="">
-          <input
-            type="text"
-            class="feedback"
-            placeholder="Write your comment here"
-            required
-          />
-          <button class="button-style" type="submit">MORE INFO</button>
-          <a href="./index.html" class="button-style restart" id="restart"
-            >RESTART</a
-          >
-        </form>
-      </div>
-      <div id="restart-popup" class="popup hidden">
-        <div class="popup-content">
-          <i class="far fa-check-circle"></i>
-          <p>Feedback has been sent successfully</p>
-          <p>Do you want to repeat the test?</p>
-          <a href="./index.html" class="button-style restart">RESTART</a>
-        </div>
-      </div>
-    </main>
-
-    <script src="./js/feedback.js"></script>
-  </body>
 </html>
