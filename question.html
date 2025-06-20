@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz EPICODE</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/images/i-logo.png"
-      type="image/x-icon"
-    />
-  </head>
 
-  <body class="background-img">
-    <header>
-      <div class="timer-container">
-        <img src="/assets/images/epicode_logo.png" alt="logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz EPICODE</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon" />
+</head>
 
-        <!--timer con il testo dentro-->
-        <div class="countdown-container text-center">
-          <svg width="150" height="150">
-            <circle class="bg" cx="75" cy="75" r="60" />
-            <circle class="progress" cx="75" cy="75" r="60" />
-          </svg>
-          <div class="timer-text-container timer-text">
-            <p class="timer-p white">SECONDS</p>
-            <div class="sessanta white" id="timer"></div>
-            <p class="timer-p white">REMAINING</p>
-          </div>
+<body class="background-img">
+  <!--HEADER-->
+  <header>
+    <div class="timer-container">
+      <!--LOGO-->
+      <a href="https://epicode.com/it/" target="_blank">
+        <img src="./assets/images/epicode_logo.png" alt="Epicode Logo" /></a>
+      <!--TIMER-->
+      <div class="countdown-container text-center">
+        <svg width="150" height="150">
+          <circle class="bg" cx="75" cy="75" r="60" />
+          <circle class="progress" cx="75" cy="75" r="60" />
+        </svg>
+        <div class="timer-text-container timer-text">
+          <p class="timer-p white">SECONDS</p>
+          <div class="sessanta white" id="timer"></div>
+          <p class="timer-p white">REMAINING</p>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <div class="questions">
-        <p class="text-center white questions-title"></p>
-        <!--h3 controllato dal js, qui appariranno le domande -->
+  <!--MAIN-->
+  <main>
+    <div class="questions">
+      <!--QUESTION TITLE-->
+      <p class="text-center white questions-title"></p>
+      <!--FORM-->
+      <form class="text-center form-domande">
+        <!--QUESTION BUTTON-->
+      </form>
+      <!--QUESTIONS COUNTER-->
+      <p class="text-center white num-quest">
+        Domanda 1 <span class="purple">/10</span>
+      </p>
+    </div>
+  </main>
 
-        <form class="text-center form-domande">
-          <!--buttons-->
-        </form>
+  <!--SCRIPT-->
+  <script src="./js/script.js"></script>
+</body>
 
-        <p class="text-center white num-quest">
-          Domanda 1 <span class="purple">/10</span>
-        </p>
-        <!--tracciamento dell array, domande -->
-      </div>
-    </main>
-
-    <script src="./js/script.js"></script>
-  </body>
 </html>

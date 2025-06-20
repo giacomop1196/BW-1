@@ -6,11 +6,11 @@ let selectedRating = 0 /* Variabile per tenere traccia delle stelle cliccate */
 let error = document.querySelector(".error-feedback")
 /* Prende l'elemento con classe "error-feedback" per mostrare eventuali messaggi di errore */
 
-for (let i = 1; i <= 10; i++) {/* Ciclo da 1 a 10 per creare le 10 stelle */
-  const img = document.createElement("img")/* Crea un elemento <img> */
-  img.src = "../assets/images/star.copy.svg"/* La stella vuota */
-  img.dataset.index = i /* Salva l’indice da 1 a 10 come attributo personalizzato con data-index sull’immagine */
-  img.classList.add("star")/* Aggiunge la classe CSS "star" all’immagine */
+for (let i = 1; i <= 10; i++) {
+  const img = document.createElement("img")
+  img.src = "../assets/images/star.copy.svg"
+  img.dataset.index = i
+  img.classList.add("star")
   img.style.margin = "10px"
 
   img.addEventListener("click", () => { /* Si aggiunge un listener per gestire il click su ciascuna stella */
@@ -18,9 +18,9 @@ for (let i = 1; i <= 10; i++) {/* Ciclo da 1 a 10 per creare le 10 stelle */
     selectedRating = index /* Aggiorna la stella selezionata */
     for (let j = 0; j < stars.length; j++) { /* Cicla tutte le stelle per aggiornare la visualizzazione se siano piene o vuote */
       if (j < index) {
-        stars[j].src = "../assets/images/star.svg" /* Le stelle fino all’indice selezionato diventano piene */
+        stars[j].src = "../assets/images/star.svg"
       } else {
-        stars[j].src = "../assets/images/star.copy.svg"/* le successive restano vuote */
+        stars[j].src = "../assets/images/star.copy.svg"
       }
     }
   })
@@ -57,4 +57,3 @@ feedback.addEventListener("keydown", (event) => {
     button.click()
   }
 })
-/* ========== FEEDBACK PAGE ========== */

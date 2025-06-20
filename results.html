@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="assets/images/i-logo.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Results</title>
-    <link
-      rel="shortcut icon"
-      href="assets/images/i-logo.png"
-      type="image/x-icon"
-    />
-  </head>
-  <body class="background-img">
-    <header>
-      <img src="./assets/images/epicode_logo.png" alt="Epicode Logo" />
-    </header>
-    <main class="result-main">
-      <section class="white result-title">
-        <h1>Results</h1>
-        <p>The summary of your answers:</p>
-      </section>
-      <section class="white doughnut-chart">
-        <div class="doughnut-chart-exitPool-Correct">
-          <h2 class="correct-result">Correct</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Results</title>
+  <link rel="shortcut icon" href="assets/images/i-logo.png" type="image/x-icon" />
+</head>
+
+<body class="background-img">
+  <!--HEADER-->
+  <header>
+    <!--LOGO-->
+    <a href="https://epicode.com/it/" target="_blank">
+      <img src="./assets/images/epicode_logo.png" alt="Epicode Logo" /></a>
+  </header>
+  <!--MAIN-->
+  <main class="result-main">
+    <section class="white result-title">
+      <h1>Results</h1>
+      <p>The summary of your answers:</p>
+    </section>
+    <section class="white doughnut-chart">
+      <!--CORRECT RESULT-->
+      <div class="doughnut-chart-exitPool-Correct">
+        <h2 class="correct-result">Correct</h2>
+      </div>
+      <!--CHART-->
+      <div class="chart-container">
+        <canvas id="mainChart"></canvas>
+        <div class="message-result">
+          <h3 class="congrat"></h3>
+          <h4 class="passedORfail"></h4>
+          <p class="final-message"></p>
         </div>
-        <div class="chart-container">
-          <canvas id="mainChart"></canvas>
-          <div class="message-result">
-            <h3 class="congrat"></h3>
-            <h4 class="passedORfail"></h4>
-            <p class="final-message"></p>
-          </div>
-        </div>
-        <div class="doughnut-chart-exitPool-Wrong">
-          <h2 class="wrong-result">Wrong</h2>
-        </div>
-      </section>
-      <section class="rateUs-link">
-        <a class="resultPage-rateButton" href="./feedback.html"> RATE US </a>
-      </section>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./js/Result_chart.js"></script>
-    <script src="./js/scriptResults.js"></script>
-  </body>
+      </div>
+      <!--WRONG RESULT-->
+      <div class="doughnut-chart-exitPool-Wrong">
+        <h2 class="wrong-result">Wrong</h2>
+      </div>
+    </section>
+    <!--GO TO FEEDBACK BUTTON-->
+    <section class="rateUs-link">
+      <a class="resultPage-rateButton" href="./feedback.html"> RATE US </a>
+    </section>
+  </main>
+
+  <!--SCRIPT-->
+
+  <!--CHART JS SCRIPT-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!--Result_chart SCRIPT-->
+  <script src="./js/Result_chart.js"></script>
+</body>
+
 </html>
